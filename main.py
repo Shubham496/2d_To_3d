@@ -2,6 +2,10 @@ import numpy as np
 import cv2
 
 def generate_3d_mesh(depth_map, grayscale_image, depth_threshold_percentage=10, height_scale=10.0, grayscale_height_scale=0.1):
+    """ 
+    Creats 3d mesh by multiplying grayscale image and depth map
+    take agruments - depthmap, grayscale_image, depth_threshhold_percentage
+    """
     height, width = depth_map.shape
     depth_threshold = np.percentile(depth_map, depth_threshold_percentage)
     
